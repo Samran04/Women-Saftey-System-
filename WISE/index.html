@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISE - IOT Safety System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="header-section">
+                    <h1 class="hero-title fade-up">WISE</h1>
+                    <div class="subtitle-container">
+                        <p class="subtitle fade-up-delay-1">
+                            <span class="highlight">IOT</span> safety system for women and children.
+                        </p>
+                        <div class="input-section fade-up-delay-2">
+                            <input 
+                                type="text" 
+                                id="device-url" 
+                                class="url-input" 
+                                placeholder="Enter ESP32 device URL"
+                            >
+                            <button id="pair-button" class="pair-button">
+                                <span class="button-text">Pair Device</span>
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                        <div class="format-text fade-up-delay-3">
+                            <span>Format: http://&lt;ESP32_IP_ADDRESS&gt;/set?value=&lt;PHONE_NUMBER&gt;</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-section fade-up-delay-4">
+                    <div class="video-thumbnail" id="video-thumbnail">
+                        <div class="video-placeholder">
+                            <div class="play-button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="video-info">
+                                <h3>WISE Demo</h3>
+                                <p>Watch system demonstration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>Pairing device...</p>
+    </div>
+
+    <!-- Modal Video -->
+    <div id="video-modal" class="modal hidden">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>NIRBHAYA System Demo</h2>
+            </div>
+            <div class="video-container">
+                <video id="demo-video" controls preload="metadata">
+                    <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Toast -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <span id="toast-message"></span>
+            <button id="toast-close" class="toast-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
