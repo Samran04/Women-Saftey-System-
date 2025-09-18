@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WISE — Women in Safe Environment</title>
+  <meta name="description" content="WISE is a compact wearable IoT safety device. Instantly notify police & family, share live location, and stay safe with one button press." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="WISE/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 aria-label="WISE — Women in Safe Environment">WISE</h1>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#tech">Tech Stack</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <span class="badge">IoT Panic Button Safety</span>
+      <h2>WISE: Compact wearable IoT device for instant SOS, police or contact alerts & live location</h2>
+      <p class="subtitle">Press once for rapid SOS to trusted contacts, police, and GPS location—even in low-network environments. Builds confidence, boosts mobility, and fosters public safety for women everywhere.</p>
+      <div class="cta-row">
+        <a href="WISE/link.html" class="btn btn-primary" aria-label="Link my device">Link my device</a>
+        <a class="btn btn-ghost" href="#how" aria-label="Learn how it works">Learn more</a>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <span class="badge">Works in low-network</span>
+        <span class="badge">Live GPS location SMS</span>
+        <span class="badge">Auto call/SMS</span>
+        <span class="badge">Compact & discreet</span>
+        <span class="badge">Tamper-proof design</span>
+      </div>
+    </section>
+
+    <section id="how">
+      <h3 class="section-title">How WISE Works</h3>
+      <p class="section-sub">Rapid panic trigger, GPS/GSM location, reliable SMS/call alert system, and app-based live status for response coordination[file:1].</p>
+      <div class="grid grid-3">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">1</div>
+          <div>
+            <h3>Panic button trigger</h3>
+            <p>Press the device button; alert is captured in milliseconds and sent for immediate action.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">2</div>
+          <div>
+            <h3>Auto alert & location</h3>
+            <p>Sends instant auto-call/SMS plus GPS/GSM live location to police and trusted contacts, even if signal or network is weak.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">3</div>
+          <div>
+            <h3>Live App Monitoring</h3>
+            <p>App dashboard shows live location and status, enabling families and authorities to monitor and help quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <h3 class="section-title">Benefits & Impact</h3>
+      <div class="info-card">
+        <div class="card">
+          <h3>Social</h3>
+          <p>Safer mobility, reduced fear, builds confidence in public spaces, encourages safety tech adoption[file:1].</p>
+        </div>
+        <div class="card">
+          <h3>Operational/Economic</h3>
+          <p>Affordable IoT, scalable to cities/states, boosts public trust, deployable for various institutions[file:1].</p>
+        </div>
+        <div class="card">
+          <h3>Technical</h3>
+          <p>Reliable GSM SMS fallback, offline retry buffer, citywide deployment, tamper-proof wearable form[file:1].</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h3 class="section-title">Tech Stack & Feasibility</h3>
+      <div class="info-card">
+        <div class="card">
+          <h3>Hardware</h3>
+          <p>ESP32C3, A9G GSM/GPS, LiPo Battery: rugged, compact, portable for discreet safety[file:1].</p>
+        </div>
+        <div class="card">
+          <h3>Software/Backend</h3>
+          <p>IoT backend, Android App, Cloud APIs support dashboards, location tracking, alert routing[file:1].</p>
+        </div>
+        <div class="card">
+          <h3>Reliability Features</h3>
+          <p>Tower triangulation fallback, tamper-resistant casing, SMS retry logic for coverage gaps[file:1].</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <small>© 2025 WISE — Women in Safe Environment</small>
+      <small>Accessibility: High color contrast, clear focus states</small>
+    </div>
+  </footer>
+
+  <script>
+    const LINK_URL = "WISE/link.html"; // TODO: replace this with the actual link
+
+    function openLink(){
+      const win = window.open(LINK_URL, "_blank", "noopener,noreferrer");
+      if(!win) location.href = LINK_URL;
+    }
+    document.getElementById("linkBtn").addEventListener("click", openLink);
+
+    document.querySelectorAll("a, button").forEach(el=>{
+      el.addEventListener("focus", ()=> el.style.outline = "2px solid #ffd166");
+      el.addEventListener("blur",  ()=> el.style.outline = "none");
+    });
+  </script>
+</body>
+</html>
